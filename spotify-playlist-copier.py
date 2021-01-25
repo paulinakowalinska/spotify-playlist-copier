@@ -3,7 +3,7 @@ import requests
 from secrets import spotify_user_id, spotify_token, spotify_playlist_id, client_secret, client_id, number_of_tracks
 
 
-class MakePlaylist:
+class CopyPlaylist:
 
     def __init__(self):
         self.token = spotify_token
@@ -87,12 +87,12 @@ class MakePlaylist:
         print(json_response)
 
 if __name__ == '__main__':
-    mp = MakePlaylist()
-    artists, songs = mp.get_playlist()
-    name = mp.get_playlist_name()
-    my_playlist_id = mp.create_copy(name)
+    cp = CopyPlaylist()
+    artists, songs = cp.get_playlist()
+    name = cp.get_playlist_name()
+    my_playlist_id = cp.create_copy(name)
     id=[]
     for i in range(0, number_of_tracks):
-       id.append(mp.get_song_id(songs[i], artists[i]))
+       id.append(cp.get_song_id(songs[i], artists[i]))
     id_new = list(filter(None, id))
-    mp.fill_playlist(my_playlist_id, id_new)
+    cp.fill_playlist(my_playlist_id, id_new)
