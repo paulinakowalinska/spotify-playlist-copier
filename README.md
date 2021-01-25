@@ -1,4 +1,4 @@
-# spotify-playlist-copy
+# spotify-playlist-copier
 Python script to copy any Spotify playlist.
 
 This script does the following:
