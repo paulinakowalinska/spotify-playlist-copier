@@ -16,3 +16,5 @@ The copied playlist is private by default.
 - `spotify_user_id` which is the username of the developer's Spotify
 - `spotify_playlist_id` which is the URI of the Spotify playlist to be copied
 - `number_of_tracks` in said playlist
+
+Inspired by <a href="https://www.youtube.com/watch?v=7J_qcttfnJA&t=294s">this</a> video. 
